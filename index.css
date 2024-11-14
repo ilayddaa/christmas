@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: url("./assets/noelbaba.webp");
+    background-size: cover;
+
+}
+
+#snow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 10px;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+
+.christmas-text {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 2.6em;
+    font-weight: 500;
+    color: #FF3030;
+    /* Parlak kırmızı */
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    animation: blink 3s infinite;
+    /* 5 saniyede bir yanıp söner */
+}
+
+/* Ekran genişliği 1200 pikselden küçük olduğunda */
+@media (max-width: 1200px) {
+    .christmas-text {
+        font-size: 2em;
+    }
+}
+
+/* Ekran genişliği 992 pikselden küçük olduğunda */
+@media (max-width: 992px) {
+    .christmas-text {
+        font-size: 1.6em;
+    }
+}
+
+/* Ekran genişliği 768 pikselden küçük olduğunda */
+@media (max-width: 768px) {
+    .christmas-text {
+        font-size: 1em;
+    }
+}
+
+/* Ekran genişliği 576 pikselden küçük olduğunda */
+@media (max-width: 576px) {
+    .christmas-text {
+        font-size: 0.8em;
+    }
+}
+
+/* Yanıp sönme efekti */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 8px #FF3030, 0 0 16px #FF3030, 0 0 24px #FF0000;
+    }
+
+    50% {
+        opacity: 0.3;
+
+    }
+}
+
+input.form-control {
+    height: 30px;
+    /* Yüksekliği ayarlayın */
+    padding: 5px 10px;
+    /* İç boşlukları ayarlayın */
+    font-size: 14px;
+    /* Yazı boyutunu ayarlayın */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Yarı saydam beyaz arka plan */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* Yarı saydam sınır */
+}
